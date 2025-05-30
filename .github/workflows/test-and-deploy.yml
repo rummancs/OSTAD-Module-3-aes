@@ -49,7 +49,5 @@ jobs:
         run: cat output30May.txt
 
       - name: Deploy Node.js app
-        run: |
-          echo "Deploying on self-hosted runner..."
-          pm2 restart app.js || pm2 start app.js
+        run: ./deploy.sh
 
